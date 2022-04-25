@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames e Animation</title>
+    <style>
+        * {
+            background-color: black;
+        }
+        
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: start;
+        }
+        
+        .box {
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+            /* Na animação vc coloca a função que criou */
+            animation-name: fly;
+            animation-duration: 2s;
+            /* É que nem na transition, como a animação ira se comportar*/
+            animation-timing-function: cubic-bezier(0.075, -0.82, 0.165, 1);
+            /* Quantos frames, ou passos a animação tera*/
+            animation-timing-function: linear;
+            /*Quantas vezes a animação vai acontecer antes de parar*/
+            animation-iteration-count: 1;
+            /* Como o proprio nome diz, a direção da animação
+            
+             animation-direction: alternate;
+
+            */
+            /* Define quais valores serão aplicados antes ou depois da animação
+                --> forwards: define que ao chegar no final da animação ele deve ficar lá 
+                --> backwards: Fica no estado inicial da animação ao chegar no final
+                --> both: acontece as 2 coisas de cima
+            */
+            animation-fill-mode: both;
+            /*
+                PS: Tem como usar apenas a propriedade animation
+                Nesse caso, basta seguir a ordem que esta sendo mostrada aqui
+            */
+        }
+        
+        .box:hover {
+            /* Serve para parar a duração ou dar start nela*/
+            animation-play-state: paused;
+        }
+        
+        @keyframes fly {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(200%, 50px)
+            }
+            100% {
+                transform: translate(calc(100vw - 300px), 0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+
+</html>
