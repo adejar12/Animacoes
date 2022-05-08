@@ -13,7 +13,8 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         
         * {
@@ -68,12 +69,15 @@
         .content-body {
             background-color: white;
             padding-left: 25px;
-            display: block;
-            transition-property: all;
-            transition-duration: 1s;
-            transition-timing-function: linear;
             height: 0px;
             overflow: hidden;
+        }
+        
+        .content,
+        .content-body {
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
         }
     </style>
 </head>
@@ -102,13 +106,29 @@
             </span>
         </div>
     </div>
+    <div class="content">
+        <div class="content-title">
+            <span>
+                <h1>Menu Drop</h1>
+            </span>
+            <div class="content-arrow" onclick="teste()">
+                <div class="arrow down">
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var show = false;
 
         function teste() {
             show = !show;
-            var content = document.querySelector("div.content-body");
-            content.setAttribute("style", `height: ${show ? '200px' : '0px'}`);
+
+            var contentBody = document.querySelector("div.content-body");
+            var content = document.querySelector("div.content");
+
+            contentBody.setAttribute("style", `height: ${show ? '250px' : '0px'}`);
+            content.setAttribute("style", `height: ${show ? '250px' : '80px'}`);
 
         }
     </script>
