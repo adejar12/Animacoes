@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Drop</title>
+    <style>
+        body {
+            background-color: #222;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .content {
+            height: 80px;
+            width: 500px;
+            background-color: white;
+        }
+        
+        .content-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-bottom: #666 solid 1px;
+        }
+        
+        .content-arrow {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .content-arrow:hover {
+            cursor: pointer;
+        }
+        
+        .arrow {
+            border: solid #666;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            width: 15px;
+            height: 15px;
+        }
+        
+        .down {
+            transform: rotate(45deg);
+        }
+        
+        .up {
+            transform: rotate(225deg);
+        }
+        
+        .content-body {
+            background-color: white;
+            padding-left: 25px;
+            display: block;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            height: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-title">
+            <span>
+                <h1>Menu Drop</h1>
+            </span>
+            <div class="content-arrow" onclick="teste()">
+                <div class="arrow down">
+
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <span>
+                <h1>Item 1</h1>
+            </span>
+            <span>
+                <h1>Item 2</h1>
+            </span>
+            <span>
+                <h1>Item 3</h1>
+            </span>
+        </div>
+    </div>
+    <script>
+        var show = false;
+
+        function teste() {
+            show = !show;
+            var content = document.querySelector("div.content-body");
+            content.setAttribute("style", `height: ${show ? '200px' : '0px'}`);
+
+        }
+    </script>
+</body>
+</body>
+
+</html>
