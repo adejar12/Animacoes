@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* A perspectiva tem se ser aplicado ao "pai", é basicamente ao que ele vai se 
+            comparar, para dar a sensação de perspectiva */
+            perspective: 1000px;
+        }
+
+        img{
+            width: 300px;
+            display: block;
+            margin: 0;
+            transition: transform 1s;
+        }
+
+        img:hover{
+            transform: translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <img src="../2 - CSS 2D transforms/cat.jpg" alt=""/>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        padding-bottom: 120px;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: auto;
+        margin-top: 80px;
+        transition: transform 2s;
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        font-size: 25px;
+      }
+
+      .div01:hover {
+        transform: rotate(45deg);
+      }
+
+      .div02 {
+        transform-origin: top;
+      }
+
+      .div02:hover {
+        transform: rotate(45deg);
+      }
+
+      .div03 {
+        transform-origin: bottom;
+      }
+
+      .div03:hover {
+        transform: rotate(45deg);
+      }
+
+      .div04 {
+        transform-origin: left;
+      }
+
+      .div04:hover {
+        transform: rotate(45deg);
+      }
+
+      .div05 {
+        transform-origin: top right;
+      }
+
+      .div05:hover {
+        transform: rotate(45deg);
+      }
+
+      .div06 {
+        transform-origin: bottom right;
+      }
+
+      .div06:hover {
+        transform: rotate(45deg);
+      }
+
+      .div07 {
+        transform-origin: bottom left;
+      }
+
+      .div07:hover {
+        transform: rotate(45deg);
+      }
+
+      .div08 {
+        transform-origin: top left;
+      }
+
+      .div08:hover {
+        transform: rotate(45deg);
+      }
+
+      .div09 {
+        width: 500px;
+        height: 300px;
+        /* Dessa maneira a forma de giro conta assim 30% no eixo x e 80% no eixo Y
+        permitindo que você controle por onde era iniciar a rotação 
+        
+        Podemos usar px também
+
+        */
+        transform-origin: 30% 80%;
+      }
+
+      .div09:hover {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div alt="" class="div01">Default</div>
+    <div alt="" class="div02">top</div>
+    <div alt="" class="div03">bottom</div>
+    <div alt="" class="div04">left</div>
+    <div alt="" class="div05">top right</div>
+    <div alt="" class="div08">top left</div>
+    <div alt="" class="div06">bottom right</div>
+    <div alt="" class="div07">bottom left</div>
+    <div alt="" class="div09">Any html Element</div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /**
+Tipos de transition delay
+
+Linear: é a transição mais simples e direta. A velocidade da animação é constante do início ao fim.
+
+Ease: é uma transição que começa devagar, acelera no meio e depois diminui a velocidade antes de parar.
+É como se o elemento estivesse ganhando velocidade lentamente, atingindo uma velocidade alta no meio e, em seguida,
+diminuindo a velocidade lentamente até parar.
+
+Ease-in: é uma transição que começa devagar e acelera no meio, mas termina abruptamente, sem diminuir a velocidade.
+É como se o elemento estivesse saindo lentamente e, de repente, acelerando.
+
+Ease-out: é o oposto do ease-in, começando rápido e diminuindo a velocidade lentamente no final. 
+É como se o elemento estivesse acelerando no início e depois diminuindo a velocidade lentamente antes de parar.
+
+Ease-in-out: na primeira parte da transição, os elementos se movem lentamente, depois aceleram e, no final, 
+diminuem a velocidade novamente. O resultado final é uma transição suave e natural que não é muito rápida ou 
+muito lenta em nenhum ponto.
+
+*/
+
+      body {
+        margin: 0;
+        background-color: #000;
+      }
+
+      .container {
+        width: 100vw;
+      }
+
+      .move {
+        margin: 2em;
+        width: 150px;
+        height: 50px;
+        padding: 10px 15px;
+        background-color: red;
+        color: #fff;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 0.5em;
+        font-size: 20px;
+        transition-property: translate();
+        transition-duration: 3s;
+      }
+
+      #ease {
+        transition-timing-function: ease;
+      }
+
+      #linear {
+        transition-timing-function: linear;
+      }
+
+      #ease-in {
+        transition-timing-function: ease-in;
+      }
+
+      #ease-out {
+        transition-timing-function: ease-out;
+      }
+
+      #ease-in-out {
+        transition-timing-function: ease-in-out;
+      }
+
+      .move:hover {
+        transform: translate(50vw, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="move" id="ease">Ease (Default)</div>
+      <div class="move" id="linear">Linear</div>
+      <div class="move" id="ease-in">Ease-In</div>
+      <div class="move" id="ease-out">Ease-Out</div>
+      <div class="move" id="ease-in-out">Ease-In-Out</div>
+    </div>
+  </body>
+</html>
