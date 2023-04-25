@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform & Transition</title>
+    <style>
+        * {
+            background-color: black;
+        }
+        
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+        
+        .box_transformes {
+            outline: 5px solid red;
+        }
+        
+        .box_transition {
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        
+        .box_transition:hover {
+            background-color: #ec5840;
+            border-radius: 50%;
+        }
+        
+        .box_transformes img {
+            /* Translate serve para mover a imagem, em X(translateX) ou Y(translateY)
+                Usando apenas a propriedade translate ele espera receber valors X e Y
+
+
+                --> TODAS essas propriedade a baixo podem ser usadas no mesmo transform
+                Exemplo: tranform translateY(100px) slaceX(0.5) rotate .... <--
+            */
+            transform: translateY(100px);
+            /* Serve para destorcer a imagem, nesse exemplo a baixo ele duplica o tamanho da imagem
+             no eixo X
+            */
+            transform: scaleX(0.5);
+            /* Rotacionar, como o proprio nome sugere
+            */
+            transform: rotate(45deg);
+            /* Para dar uma pequena inclinada no elemento
+            */
+            transform: skewX(10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_transformes">
+        <img src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Brazil.png" alt="">
+    </div>
+
+    <div class="box_transition">
+
+    </div>
+
+</body>
+
+</html>
