@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        background-color: #c47135;
+        font-family: sans-serif;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 12px 40px;
+        text-align: center;
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      a::before{
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: -5px;
+        left: -5px;
+        border-top: 2px solid #c47135;
+        border-left: 2px solid #c47135;
+        transition: all 0.25s;
+      }
+
+      a:hover::before{
+        height: 100%;
+        width: 100%;
+      }
+
+      a::after{
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        bottom: -5px;
+        right: -5px;
+        border-bottom: 2px solid #c47135;
+        border-right: 2px solid #c47135;
+        transition: all 0.25s;
+      }
+
+      a:hover::after{
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a>SUMIT</a>
+  </body>
+</html>
