@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+        position: relative;
+        height: 60px;
+        width: 100px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        border:2px solid white;
+        transition: all 0.2s;
+      }
+
+      a:hover{
+        color: black;
+      }
+
+      a::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+
+      a:hover::before{
+        opacity: 1;
+        transform: rotate(15deg);
+      }
+
+      a span{
+        color: transparent;
+        position: relative;
+      }
+
+      a span::before{
+        content: "B";
+        position: absolute;
+        color: white;
+        transition: all 0.2s;
+      }
+
+      a:hover span::before{
+        color: black;
+        font-size: 60px;
+        transform: translate(-65%, -10%) rotate(360deg);
+      }
+
+    </style>
+  </head>
+  <body>
+    <a><span>B</span>utton</a>
+  </body>
+</html>

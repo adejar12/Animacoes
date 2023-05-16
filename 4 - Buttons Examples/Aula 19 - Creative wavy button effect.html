@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #00aeff;
+        font-family: sans-serif;
+        position: relative;
+        padding: 15px 30px;
+        letter-spacing: 3px;
+        font-size: 18px;
+        transition: all 0.2s;
+        text-transform: uppercase;
+        border: 2px solid #00aeff;
+        overflow: hidden;
+        transition: all 0.5s;
+      }
+
+      .wave{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: calc(100% + 22px);
+        background-color: #00aeff;
+        transition: all 1s;
+        z-index: -1;
+      }
+
+      a:hover{
+        color: white;
+      }
+
+      a:hover .wave{
+        top: 0;
+      }
+
+
+      .wave::before{
+        content: "";
+        position: absolute;
+        top: -22px;
+        left: 0;
+        width: 100%;
+        height: 22px;
+        background: url(wave.png);
+        animation: wavy 0.5s linear infinite;
+      }
+
+      @keyframes wavy{
+        0%{
+          background-position-x: 0;
+        }
+
+        0%{
+          background-position-x: 118px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a>
+      button
+      <div class="wave"></div>
+    </a>
+  </body>
+</html>
