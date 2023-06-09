@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .container{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img{
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .caption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 30%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: all 0.5s;
+            background-color: rgba(0, 0, 0, 0.443);
+            transform: translateY(100%);
+        }
+
+        .caption h1{
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .caption p{
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        .container:hover .caption{
+            transform: translateY(0%);
+        }
+
+        .container:hover img{
+            transform: translateY(-30%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.png">
+        <div class="caption">
+            <h1>Amazing Caption!</h1>
+            <p>You can write anythin you want here!</p>
+        </div>
+    </div>
+</body>
+</html>
