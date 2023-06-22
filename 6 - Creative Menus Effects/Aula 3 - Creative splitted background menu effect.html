@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+      }
+
+      ul li a {
+        display: block;
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        text-transform: capitalize;
+        text-decoration: none;
+        position: relative;
+        transform: all 0.3s;
+        transition-delay: 0.3s;
+      }
+
+      ul li span,
+      .span2,
+      .span3 {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: white;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transition: all 0.5s;
+        transform-origin: top;
+      }
+
+      .span3{
+        transform: scaleX(0);
+      }
+
+      span:nth-child(2) {
+        left: 25%;
+        transition-delay: 0.15s;
+      }
+
+      span:nth-child(3) {
+        left: 50%;
+        transition-delay: 0.3s;
+      }
+
+      span:nth-child(4) {
+        left: 75%;
+        transition-delay: 0.45s;
+      }
+
+      a:hover span,
+      a:hover .span2 {
+        transform: scaleY(1);
+      }
+
+      a:hover .span3{
+        transform: scaleX(1);
+      } 
+
+      a:hover {
+        color: #000;
+      }
+
+      .span2,
+      .span3 {
+        width: 100%;
+        height: 25%;
+      }
+
+      .span2:nth-child(2),
+      .span3:nth-child(2) {
+        top: 25%;
+        left: 0;
+        transition-delay: 0.15s;
+      }
+
+      .span2:nth-child(3),
+      .span3:nth-child(3) {
+        top: 50%;
+        left: 0;
+        transition-delay: 0.3s;
+      }
+
+      .span2:nth-child(4),
+      .span3:nth-child(4) {
+        top: 75%;
+        left: 0;
+        transition-delay: 0.45s;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"
+          >Home
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >About
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >Services
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >Portigolio
+          <span class="span2"></span>
+          <span class="span2"></span>
+          <span class="span2"></span>
+          <span class="span2"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >Contact
+          <span class="span3"></span>
+          <span class="span3"></span>
+          <span class="span3"></span>
+          <span class="span3"></span>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
