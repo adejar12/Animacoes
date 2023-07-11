@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: black;
+      }
+
+      .card{
+        position: relative;
+        width: 320px;
+        padding: 40px;
+        background-color: white;
+        box-shadow: 0 10px 30px rgb(255, 255, 255,0.8);
+        overflow: hidden;
+      }
+
+      .card::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 5px);
+        width: 100%;
+        height: 100%;
+        background-color: #ff56ac;
+        z-index: 1;
+        transition: 0.5s;
+      }
+
+      .card:hover::before{
+        bottom: 0;
+      }
+
+      .content{
+        position: relative;
+        text-transform: capitalize;
+        color: #777;
+        z-index: 2;
+        transition: 0.5s;
+      }
+
+      h2{
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 30px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+
+      a{
+        margin-top: 10px;
+        font-size: 14px;
+        display: inline-block;
+        text-decoration: none;
+        color: #777;
+        padding: 6px 10px;
+        font-weight: 600;
+        background-color: white;
+        box-shadow: 0 2px 20px rgb(0, 0, 0,0.05);
+      }
+
+      .card:hover .content{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h2>Design</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+          harum ad repudiandae, laudantium possimus commodi atque nihil quaerat
+          aut id! Illo delectus deserunt exercitationem sint dicta itaque eum
+          quibusdam optio!
+        </p>
+        <a href="#">read more</a>
+      </div>
+    </div>
+  </body>
+</html>
