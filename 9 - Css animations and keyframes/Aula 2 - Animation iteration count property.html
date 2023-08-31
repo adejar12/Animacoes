@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .standard,
+      .ease-in ,
+      .ease-out,
+      .ease-in-out{
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        animation-name: moving;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        animation-timing-function: ease;
+      }
+
+      .ease-in{
+        animation-timing-function: ease-in;
+      }
+
+      .ease-out{
+        animation-timing-function: ease-out;
+      }
+
+      .ease-in-out{
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes moving {
+        0% {
+          transform: translateX(50px);
+        }
+
+        50% {
+          background-color: blue;
+        }
+
+        100% {
+          transform: translateX(calc(100vw - 150px));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="standard">standard</div>
+      <div class="ease-in">ease-in</div>
+      <div class="ease-out">ease-out</div>
+      <div class="ease-in-out">ease-in-out</div>
+    </div>
+  </body>
+</html>

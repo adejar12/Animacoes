@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      /* As diferenças do fill é mais para o começo da animação
+       O backwards já começa no 0%
+       O forwards não
+      
+      */
+
+      .standard,
+      .backwards ,
+      .forwards,
+      .both{
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        animation-name: moving;
+        animation-duration: 5s;
+      }
+
+      .backwards {
+        animation-fill-mode: backwards;
+        animation-delay: 5s;
+      }
+
+      .forwards {
+        animation-fill-mode: forwards;
+        animation-delay: 10s;
+      }
+
+      .both {
+        animation-fill-mode: both;
+        animation-delay: 15s;
+      }
+
+      @keyframes moving {
+        0% {
+          transform: translateX(50px);
+        }
+
+        50% {
+          background-color: blue;
+        }
+
+        100% {
+          transform: translateX(calc(100vw - 150px));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="standard">standard</div>
+      <div class="backwards">backwards</div>
+      <div class="forwards">forwards</div>
+      <div class="both">both</div>
+    </div>
+  </body>
+</html>
