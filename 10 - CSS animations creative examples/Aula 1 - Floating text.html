@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #000;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1{
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 90px;
+        line-height: 90px;
+        letter-spacing: 15px;
+        text-transform: uppercase;
+
+        animation: float 3s linear infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes float {
+        from{
+          transform: rotate(5deg);
+        }
+        to{
+          transform: rotate(-5deg);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Comming <br>Soon!<br></h1>
+  </body>
+</html>

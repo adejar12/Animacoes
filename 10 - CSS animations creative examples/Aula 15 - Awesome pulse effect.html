@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .pulse{
+        width: 100px;
+        height: 100px;
+        background-color: #58ea00;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 48px;
+        position: relative;
+      }
+
+      .pulse::before, .pulse::after{
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        border: 1px solid #58ea00;
+        border-radius: 50%;
+        animation: pulsing 1.2s linear infinite;
+      }
+
+      .pulse::after{
+        animation-delay: 0.5s;
+      }
+
+      @keyframes pulsing {
+        0%{
+          transform: scale(0.5);
+          opacity: 0;
+        }
+
+        50%{
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        100%{
+          transform: scale(1.2);
+          opacity: 0;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="pulse">
+      <i class="fas fa-phone"></i>
+    </div>
+  </body>
+</html>
