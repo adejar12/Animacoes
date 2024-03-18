@@ -30,7 +30,8 @@
       .standard,
       .ease-in ,
       .ease-out,
-      .ease-in-out{
+      .ease-in-out,
+      linear{
         width: 150px;
         height: 150px;
         background-color: red;
@@ -38,6 +39,10 @@
         animation-duration: 5s;
         animation-fill-mode: both;
         animation-timing-function: ease;
+      }
+
+      .linear{
+        animation-timing-function: linear;
       }
 
       .ease-in{
@@ -69,6 +74,7 @@
   </head>
   <body>
     <div class="content">
+      <div class="standard">linear</div>
       <div class="standard">standard</div>
       <div class="ease-in">ease-in</div>
       <div class="ease-out">ease-out</div>
