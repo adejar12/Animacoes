@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: white;
+        position: relative;
+      }
+
+      h1::before {
+        content: "loading..";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #f6b93b;
+        overflow: hidden;
+        border-right: 4px solid #f6b93b;
+        animation: animate 5s linear infinite;
+      }
+
+      @keyframes animate {
+        0% {
+          width: 0;
+        }
+
+        50% {
+          width: 100%;
+        }
+        100% {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loading..</h1>
+  </body>
+</html>

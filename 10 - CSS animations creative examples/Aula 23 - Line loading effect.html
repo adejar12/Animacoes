@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .loading {
+        width: 300px;
+        height: 3px;
+        background-color: white;
+        animation: line 2s linear infinite alternate;
+      }
+
+      @keyframes line {
+        0% {
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+        45% {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        50% {
+          transform: scaleX(1);
+          transform-origin: right;
+        }
+        100% {
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading"></div>
+  </body>
+</html>

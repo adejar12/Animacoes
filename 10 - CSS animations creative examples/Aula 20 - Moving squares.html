@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .loader {
+        width: 150px;
+        height: 150px;
+        position: relative;
+      }
+
+      span {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 4px;
+        animation: chase 2s linear infinite;
+      }
+
+      span:nth-child(2){
+        animation-delay: 0.7s;
+      }
+
+      span:nth-child(3){
+        animation-delay: 1.4s;
+      }
+
+      @keyframes chase {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        12.5% {
+          top: 0;
+          left: 50%;
+        }
+        37.5% {
+          top: 50%;
+          left: 50%;
+        }
+        50% {
+          top: 50%;
+          left: 50%;
+        }
+        62.5% {
+          top: 50%;
+          left: 00%;
+        }
+        75% {
+          top: 50%;
+          left: 0%;
+        }
+        87.5% {
+          top: 0;
+          left: 0%;
+        }
+        100% {
+          top: 0;
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>
